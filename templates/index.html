@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Project</title>
+</head>
+<style>
+    body{
+    background:  url("media/bg_main.jpg") no-repeat;
+    background-size:100%;
+    }
+</style>
+<body>
+
+<h1>Extract text from image</h1>
+
+<p>Basically, Its website to extract license plate number from car image, Upload the image and see the prediction</p>
+<p>This data set collected from <a href="https://medusa.fit.vutbr.cz/traffic/research-topics/general-traffic-analysis/holistic-recognition-of-low-quality-license-plates-by-cnn-using-track-annotated-data-iwt4s-avss-2017/">here</a></p>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
+
+
+<img src="{{ uploaded_file_url }}" alt="">
+
+<p>Extracted text : {{predictions}}</p>
+
+</body>
+</html>
