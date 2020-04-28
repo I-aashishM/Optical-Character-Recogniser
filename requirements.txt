@@ -21,9 +21,6 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycparser==2.20
 soupsieve==1.9.5
-tensorboard==2.0.2
-tensorflow==2.0.0
-tensorflow-estimator==2.0.1
 whitenoise==5.0.1
 widgetsnbextension==3.5.1
 psycopg2==2.7.3.2
